@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de usuario</title>
+</head>
+<body>
+    <h1>Rellena tu CV</h1>
+    <form></form>
+        <!-- label e input para nombre -->
+        <label for="nombre">Nombre</label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" style="width: 300px"><br><br>
+
+        <!-- label e iinput para apellidos -->
+        <label for="apellidos">Apellidos</label><br>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos" style="width: 300px"><br><br>
+
+        <!-- contraseña y su confirmacion -->
+        <label for="contrasena">Contraseña</label><br>
+        <input type="password" id="contrasena" name="contrasena" placeholder="Ingrese su contraseña" style="width: 300px"><br><br>
+
+        <label for="confirmar">Confirme su contraseña</label><br>
+        <input type="password" id="confirmar" name="confirmar" placeholder="Confirme su contraseña" style="width: 300px"><br><br>
+
+        <!-- identificacion del usuario -->
+        <label for="identificacino">Identificacion</label><br>
+        <!-- tipo de identificacion -->
+        <select name="tipo_identificacion" id="identificacioon" style="width: 50px;">
+            <option>T.I</option>
+            <option>C.I</option>
+        </select>
+        <!-- espacio para ingresar el numero -->
+        <input type="number" id="numero_identificacion" name="numero_identificacion" placeholder="Ingrese su numero de documentos" style="width: 245px"><br><br>
+        
+        <!-- redio select sexo -->
+        <label for="sexo">Sexo</label><br>
+        <!-- eleccio masculino -->
+        <input type="radio" name="sexo" id="masculino">
+        <label for="masculino">Masculino</label><br>
+        <!-- eleccion femenino -->
+        <input type="radio" name="sexo" id="femenino">
+        <label for="femenino">Femenino</label><br><br>
+
+        <!-- inclusion de foto -->
+        <label for="incluir_foto">Incluir foto</label><br>
+        <input type="file" name="incluir_foto" id="incluir_foto"><br><br>
+
+        <input type="checkbox" name="not_idea" id="estudiante">
+        <label for="estudiante">Estudiante</label><br><br>
+
+        <!-- apartado de datos personales -->
+        <fieldset>
+            <legend>Datos personales</legend><br>
+
+            <!-- seleccionando departamento -->
+            <label for="departamento">Departamento</label><br>
+            <select name="departamento" id="departamento" style="width: 150px" >
+                <option>Santander</option>
+                <option>Norte de Santander</option>
+                <option>Cundinamarca</option>
+            </select><br><br>
+
+            <!-- fecha de nacimiento -->
+            <label for="fecha_nacimiento">Ingrese su fecha de nacimiento</label><br>
+            <input type="date" name="fecha_nacimiento" id="fecha_nacimiento"><br><br>
+
+            <!-- temas de interes -->
+            <label for="temas_interes">Temas de interes</label><br>
+            <datalist id="temas_interes">
+                <option value="primero"></option>
+                <option value="segundo"></option>
+            </datalist>
+        </fieldset>
+    </form>
+
+</body>
+</html>
