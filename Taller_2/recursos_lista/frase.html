@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases celebres</title>
+</head>
+<body>
+    <form action="../Lista.html" id="form_frases">
+        <h2>Frases celebres de usuario</h2>
+        <br>
+
+        <!-- ingreso de usuario -->
+        Nombre de usuario <br>
+        <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre de usuario" style="width: 300px"><br><br>
+
+        <!-- definiendo estilo de text area con altura y ancho fijo -->
+        <style>
+            textarea{
+                width: 300px;
+                height: 150px;
+                resize: none;
+            }
+        </style>
+        <!-- text area para ingresar la primera frase -->
+        Frase principal <br>
+        <textarea name="frase_principal" id="frase_principal" placeholder="Ingrese su frase principal" maxlength="300"></textarea> <br> <br>
+
+        <!-- text area para ingresar la segunda frase -->
+        Frase secundaria <br>
+        <textarea name="frase_secundaria" id="frase_secundaria" placeholder="Ingrese su frase secundaria" maxlength="300"></textarea> <br> <br>
+
+        <!-- boton para agregar los cambios -->
+        <input type="submit" value="Enviar" name="enviar">
+
+        <!-- boton para enviar correo -->
+        <input type="button" value="Enviar correo" id="enviar_correo" name="enviar_correo">
+    </form>
+</body>
+</html>
