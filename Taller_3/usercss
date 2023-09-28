@@ -16,7 +16,8 @@
         <h3>Formulario Registro</h3>
 
         <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombre">
-        <input class="controls" type="text" name="apellido" id="apellido" placeholder="Apellido">
+        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Apellido">
+
         <select name="tipo_doc" id="type_cod" placeholder="Tipo de documento">
         
         <option value="Elegir" id="Elegir">Tipo de Documento</option>
@@ -267,10 +268,11 @@
         <option value="Zambia" id="ZM">Zambia</option>
         <option value="Zimbabue" id="ZW">Zimbabue</option>
 
-    <input class="controls" type="email" name="correo" id="correo" placeholder="Correo">
+  
+    <input class="controls" type="text" name="direccion" id="direction" placeholder="Dirección">
     <input class="controls" type="password" name="correo" id="contraseñas" placeholder="Contraseña">
+    <input class="controls" type="email" name="correo" id="correo" placeholder="Correo">
     <input class="controls" type="cel" name="celular" id="celular" placeholder="celular">
-
     <button type="submit" class="botons">Registrar</button>
  
   </section>
