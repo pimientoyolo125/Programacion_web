@@ -74,10 +74,9 @@ body {
     margin-bottom: 30px;
 }
 
-.form-content label,
-.was-validated .form-check-input:invalid~.form-check-label,
-.was-validated .form-check-input:valid~.form-check-label {
-    color: #fff;
+.form-content label {
+    color: #ffffff;
+    margin-top: 10px;
 }
 
 .form-content input[type=text],
@@ -95,7 +94,6 @@ body {
     color: #8D8D8D;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    margin-top: 16px;
 }
 
 .btn-primary {
@@ -103,52 +101,4 @@ body {
     outline: none;
     border: 0px;
     box-shadow: none;
-}
-
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active {
-    background-color: #495056;
-    outline: none !important;
-    border: none !important;
-    box-shadow: none;
-}
-
-.form-content textarea {
-    position: static !important;
-    width: 100%;
-    padding: 8px 20px;
-    border-radius: 6px;
-    text-align: left;
-    background-color: #fff;
-    border: 0;
-    font-size: 15px;
-    font-weight: 300;
-    color: #8D8D8D;
-    outline: none;
-    resize: none;
-    height: 120px;
-    -webkit-transition: none;
-    transition: none;
-    margin-bottom: 14px;
-}
-
-.form-content textarea:hover,
-.form-content textarea:focus {
-    border: 0;
-    background-color: #ebeff8;
-    color: #8D8D8D;
-}
-
-.mv-up {
-    margin-top: -9px !important;
-    margin-bottom: 8px !important;
-}
-
-.invalid-feedback {
-    color: #ff606e;
-}
-
-.valid-feedback {
-    color: #2acc80;
 }
