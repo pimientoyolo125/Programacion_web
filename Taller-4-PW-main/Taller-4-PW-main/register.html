@@ -17,6 +17,20 @@
     
     <h3>Formulario Registro</h3>
 
+    
+    <label class="form-label" for="nombres">Nombre</label>
+    <input class="controls" type="text" name="nombres" id="nombres">
+    <p class="porDefecto" id="nombresError">Nombre invalido digite de nuevo</p>
+    <p class="porDefecto" id="nombresCorrecto">check</p>
+    <br>
+    
+    <label class="form-label" for="apellidos">Apellido</label>
+    <input class="controls" type="text" name="apellidos" id="apellidos" >
+    <p class="porDefecto" id="apellidosError">apellidos invalidos digite de nuevo</p>
+    <p class="porDefecto" id="apellidosCorrecto">check</p>
+    <br>
+
+    <label class="form-label" for="pais">Pais</label>
     <select name="pais" class="controls" id="pais" placeholder="Pais">
         
         <option value="Elegir" id="Elegir">Elegir pais</option>
@@ -257,43 +271,40 @@
         <option value="Yemen" id="YE">Yemen</option>
         <option value="Zambia" id="ZM">Zambia</option>
         <option value="Zimbabue" id="ZW">Zimbabue</option>
-    
-    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-    <p class="porDefecto" id="nombresError">Nombre invalido digite de nuevo</p>
-    <p class="porDefecto" id="nombresCorrecto">check</p>
+    </select>
     <br>
-
-    <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-    <p class="porDefecto" id="apellidosError">apellidos invalidos digite de nuevo</p>
-    <p class="porDefecto" id="apellidosCorrecto">check</p>
-    <br>
-
-    <input class="controls" type="text" name="direccion" id="direccion" placeholder="Ingrese su Direccion">
+    <label class="form-label" for="direccion">Dirección</label>
+    <input class="controls" type="text" name="direccion" id="direccion">
     <p class="porDefecto" id="direccionError">Direccion invalida digite de nuevo</p>
     <p class="porDefecto" id="direccionCorrecto">check</p>
     <br>
 
-    <input class="controls" type="text" name="usuario" id="usuario" placeholder="Ingrese su Ususario">
+    <label class="form-label" for="usuario">Usuario</label>
+    <input class="controls" type="text" name="usuario" id="usuario">
     <p class="porDefecto" id="usuarioError">Usuario invalido digite de nuevo</p>
     <p class="porDefecto" id="usuarioCorrecto">check</p>
     <br>
 
-    <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+    <label class="form-label" for="correo">Correo</label>
+    <input class="controls" type="email" name="correo" id="correo">
     <p class="porDefecto" id="correoError">Correo invalido digite de nuevo</p>
     <p class="porDefecto" id="correoCorrecto">check</p>
     <br>
 
-    <input class="controls" type="text" name="celular" id="celular" placeholder="Ingrese su celular">
+    <label class="form-label" for="celular">Celular</label>
+    <input class="controls" type="text" name="celular" id="celular">
     <p class="porDefecto" id="celularError">Numero de celular invalido</p>
     <p class="porDefecto" id="celularCorrecto">check</p>
     <br>
 
-    <input class="controls" type="password" name="contraseñas" id="contraseñas" placeholder="Ingrese su Contraseña">
+    <label class="form-label" for="contraseñas">Contraseña</label>
+    <input class="controls" type="password" name="contraseñas" id="contraseñas">
     <p class="porDefecto" id="contraseñasError">Contraseña insegura digite de nuevo</p>
     <p class="porDefecto" id="contraseñasCorrecto">check</p>
     <br>
 
-    <input class="controls" type="password" name="confirmarps" id="confirmarps" placeholder="Confirmar Contraseña">
+    <label class="form-label" for="confirmarps">Confirmar contraseña</label>
+    <input class="controls" type="password" name="confirmarps" id="confirmarps">
     <p class="porDefecto" id="confirmarpsError">La contraseña no coincide</p>
     <p class="porDefecto" id="confirmarpsCorrecto">check</p>
     <br>
@@ -315,6 +326,7 @@
                 <option value="Negro" id="NG">Negro</option>
     
             </select>
+            <br>
 
             <select class="controls" id="marca">
 
@@ -334,6 +346,7 @@
                 <option value="porsche" id="PRCH">Porsche</option>
     
             </select>
+            <br>
 
             <select class="controls" id="estilo">
 
@@ -350,11 +363,16 @@
                 <option value="Camioneta pickup" id="CMPK">Pickup</option>
     
             </select>
+            <br>
 
-            <input class="controls" type="text" name="modelo" id="modelo" placeholder="Modelo del coche">
+            <label for="modelo">Modelo del coche</label>
+            <input class="controls" type="text" name="modelo" id="modelo">
+            <br>
 
             <h3 >¿Cuanto estarias dispuesto a pagar?</h3>
             <label for="range" class="form-label">Valor en Dolares</label>
+            <br>
+            <br>
 
             <h6>minimo</h6>
             <div class ="inputDiv i1"></div>
