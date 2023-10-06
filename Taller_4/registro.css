@@ -43,13 +43,14 @@ body {
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
-    border: 1px solid #4fc4e7;
+    border: 1px solid #aee0f0;
     border-radius: 4px;
     font-family: 'calibri';
 }
 
-.from-label {
-    font-size: 16px;
+.form-label {
+    font-family: 'sans';
+    font-size: 18px;
 }
 
 .form-register p {
@@ -71,7 +72,7 @@ body {
 
 .form-register .botons {
     width: 50%;
-    background: #4fc4e7;
+    background: #aee0f0;
     border: none;
     padding: 12px;
     color: black;
