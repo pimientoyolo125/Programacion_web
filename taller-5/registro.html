@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div id="separar">
+    <div class="container" id="separar">
         <div id="formulario">
 
             <h1 id="titulo_formulario">Registro</h1>
@@ -32,8 +32,7 @@
 
             <div class="entrada">
                 <div class="etiqueta"><label for="direccion">Fecha de nacimiento</label></div>
-                <input type="date" id="input_date" name="input_date">
-                <p class="p-edad"></p>
+                <input type="date" id="input_date" name="input_date" class="ingresar">
             </div>
 
             <div class="entrada">
@@ -58,7 +57,7 @@
                 <p class="alerta">Contraseñas no coinciden</p>
             </div>
 
-            <div class="form-check">
+            <div class="entrada_check">
                 <input type="checkbox" id="enfermedades">
                 <div class="etiqueta_box"> <label for="enfermedades">¿Ha sufrido alguna enfermedad contagiosa?</label></div>
 
@@ -68,9 +67,9 @@
                 <div class="form_secundario">
 
                     <div class="entrada">
-                        <div class="etiqueta"><label for="color">¿Cual enfermedad?</div>
+                        <div class="etiqueta"><label for="entrada_enfermedades">¿Cual enfermedad?</div>
 
-                        <select id="color" class="ingresar2">
+                        <select id="entrada_enfermedades" class="ingresar_select">
 
                             <option value="default">|-----------|</option>
                                 <option value="Evola" >Evola</option>
@@ -91,7 +90,7 @@
 
         </div>
 
-        <div id="grilla">
+        <div class="grilla" id="grilla">
             <table id="datatable_users" class="table table-striped">
                 <thead>
                     <tr>
@@ -107,9 +106,11 @@
         </div>
     </div>
 
-    <!-- <script src="validar.js"></script>
+    <script src="validar.js"></script>
     <script src="desplegar.js"></script>
-    <script src="slider.js"></script> -->
+    <script src="main.js"></script>
+    <script src="fecha.js"></script>
+    
 </body>
 
 </html>

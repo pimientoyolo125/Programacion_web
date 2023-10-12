@@ -1,14 +1,14 @@
-var desplegar = document.getElementById("despliegue_gustos");
-var radio_gustos = document.getElementById("gustos");
+var desplegar = document.getElementById("despliegue_enfermedades");
+var checkbox_enfermedades = document.getElementById("enfermedades");
 
 var bandera = false;
 
-radio_gustos.addEventListener("click", function(){
-    if(bandera != false){
-        radio_gustos.checked = !radio_gustos.checked;
+checkbox_enfermedades.addEventListener("click", function() {
+    if (bandera != false) {
+        checkbox_enfermedades.checked = !checkbox_enfermedades.checked;
         desplegar.style.display = "none";
         bandera = false;
-    }else{
+    } else {
         bandera = true;
         desplegar.style.display = "block";
     }
