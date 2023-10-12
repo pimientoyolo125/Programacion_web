@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Usuario</title>
+    <link rel="stylesheet" href="registro.css">>
+    <link rel="stylesheet" href="validar.css">
+    <link rel="stylesheet" href="slider.css">
+</head>
+
+<body>
+    <div id="separar">
+        <div id="formulario">
+
+            <h1 id="titulo_formulario">Registro</h1>
+
+            <div class="entrada">
+                <div class="etiqueta"><label for="nombre">Nombre</label></div>
+                <input type="text" id="nombre" placeholder="Juanito" class="ingresar">
+                <p class="alerta">Maximo 25 caracteres</p>
+                <p class="alerta">Nombre invalido</p>
+            </div>
+
+            <div class="entrada">
+                <div class="etiqueta"><label for="apellido">Apellido</label></div>
+                <input type="text" id="apellido" placeholder="Perez" class="ingresar">
+                <p class="alerta">Maximo 25 caracteres</p>
+                <p class="alerta">Apellido invalido</p>
+            </div>
+
+            <div class="entrada">
+                <div class="etiqueta"><label for="direccion">Fecha de nacimiento</label></div>
+                <input type="date" id="input_date" name="input_date">
+                <p class="p-edad"></p>
+            </div>
+
+            <div class="entrada">
+                <div class="etiqueta"><label for="correo">Correo</label></div>
+
+                <input type="text" id="correo" placeholder="juanitoPerez@correo.com" class="ingresar">
+                <p class="alerta">Correo invalido</p>
+            </div>
+
+            <div class="entrada">
+                <div class="etiqueta"><label for="contrasena">Contraseña</label></div>
+
+                <input type="password" id="contrasena" placeholder="****" class="ingresar">
+                <p class="alerta">La contraseña debe tener de 15 a 20 caracteres</p>
+                <p class="alerta">Contraseñas no coinciden</p>
+            </div>
+
+            <div class="entrada">
+                <div class="etiqueta"><label for="cf_contrasena">Confirme la Contraseña</label></div>
+
+                <input type="password" id="cf_contrasena" placeholder="****" class="ingresar">
+                <p class="alerta">Contraseñas no coinciden</p>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" id="enfermedades">
+                <div class="etiqueta_box"> <label for="enfermedades">¿Ha sufrido alguna enfermedad contagiosa?</label></div>
+
+            </div>
+
+            <div id="despliegue_enfermedades">
+                <div class="form_secundario">
+
+                    <div class="entrada">
+                        <div class="etiqueta"><label for="color">¿Cual enfermedad?</div>
+
+                        <select id="color" class="ingresar2">
+
+                            <option value="default">|-----------|</option>
+                                <option value="Evola" >Evola</option>
+                                <option value="Hepatitis" >Hepatitis</option>
+                                <option value="viruela" >viruela</option>
+                                <option value="Sarampion" >Sarampion</option>
+                                <option value="otro" >otro</option>
+    
+                
+                        </select>
+                        <p class="alerta">Elige una enfermedad</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <button id="registrar">Registrar</button>
+
+        </div>
+
+        <div id="grilla">
+            <table id="datatable_users" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="centered">#</th>
+                        <th class="centered">Name</th>
+                        <th class="centered">Email</th>
+                        <th class="centered">City</th>
+                        <th class="centered">Company</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody_users"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- <script src="validar.js"></script>
+    <script src="desplegar.js"></script>
+    <script src="slider.js"></script> -->
+</body>
+
+</html>
