@@ -1,16 +1,10 @@
 var nombre = document.getElementById("nombre");
 var apellido = document.getElementById("apellido");
-var pais = document.getElementById("pais");
-var direccion = document.getElementById("direccion");
-var usuario = document.getElementById("usuario");
 var correo = document.getElementById("correo");
 var contrasena = document.getElementById("contrasena");
 var cf_contrasena = document.getElementById("cf_contrasena");
-var radio_gustos = document.getElementById("gustos");
-var color = document.getElementById("color");
-var marca = document.getElementById("marca");
-var tipo_coche = document.getElementById("tipo_coche");
 var registrar = document.getElementById("registrar");
+var fecha = document.getElementById("input_date");
 
 validacion = {
     nombre: /^[a-zA-Z\s]{1,25}$/,
@@ -49,24 +43,34 @@ registrar.addEventListener("click", function() {
         bandera = false;
     }
 
-    if (!validacion.correo.test(correo.value)) {
+    if(input_date.value == ""){
         alertas[4].style.display = "block";
+        document.getElementById("age").style.display = "none";
+        bandera = false;
+    }else if((new Date(input_date.value)) > new Date()){
+        alertas[5].style.display = "block";
+        document.getElementById("age").style.display = "none";
+        bandera = false;
+    }
+
+    if (!validacion.correo.test(correo.value)) {
+        alertas[6].style.display = "block";
         bandera = false;
     }
 
     if (!validacion.contrasena.test(contrasena.value)) {
-        alertas[5].style.display = "block";
+        alertas[7].style.display = "block";
         bandera = false;
     } else if (contrasena.value != cf_contrasena.value) {
-        alertas[6].style.display = "block";
-        alertas[7].style.display = "block";
+        alertas[8].style.display = "block";
+        alertas[9].style.display = "block";
         bandera = false;
     }
 
     if (checkbox_enfermedades.checked) {
 
         if (entrada_enfermedades.value == "Elegir") {
-            alertas[8].style.display = "block"
+            alertas[9].style.display = "block"
             bandera = false;
         }
     }

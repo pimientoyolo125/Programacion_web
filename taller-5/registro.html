@@ -31,8 +31,11 @@
             </div>
 
             <div class="entrada">
-                <div class="etiqueta"><label for="direccion">Fecha de nacimiento</label></div>
-                <input type="date" id="input_date" name="input_date" class="ingresar">
+                <div class="etiqueta"><label for="input_date">Fecha de nacimiento</label></div>
+                <input type="date" id="input_date" class="ingresar">
+                <p class="alerta">Ingrese una fecha</p>
+                <p class="alerta">Fecha invalida</p>
+                <p id="age"></p>
             </div>
 
             <div class="entrada">
@@ -71,7 +74,7 @@
 
                         <select id="entrada_enfermedades" class="ingresar_select">
 
-                            <option value="default">|-----------|</option>
+                            <option value="Elegir">Elegir</option>
                                 <option value="Evola" >Evola</option>
                                 <option value="Hepatitis" >Hepatitis</option>
                                 <option value="viruela" >viruela</option>

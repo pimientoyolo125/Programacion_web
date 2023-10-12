@@ -1,22 +1,24 @@
-// Obtener el input de fecha de nacimiento
-var birthdateInput = document.getElementById("input_date");
+var input_date = document.getElementById("input_date");
+var p_edad = document.getElementById("age");
 
-// Escuchar el evento de cambio en el input
-birthdateInput.addEventListener("change", function() {
-    // Obtener el valor de la fecha de nacimiento
-    var birthdate = new Date(this.value);
+input_date.addEventListener("change", function() {
 
-    // Obtener la fecha actual
-    var today = new Date();
+    var cumple = new Date(this.value);
 
-    // Calcular la diferencia en años
-    var age = today.getFullYear() - birthdate.getFullYear();
+    var hoy = new Date();
 
-    // Si el mes de nacimiento es mayor al mes actual o el mes es igual y el día es mayor al día actual, se resta un año
-    if (today.getMonth() < birthdate.getMonth() || (today.getMonth() == birthdate.getMonth() && today.getDate() < birthdate.getDate())) {
-        age--;
+    p_edad.style.display = "block";
+
+    if(cumple > hoy){
+        p_edad.textContent = "No es posible calcular la edad";
+    }else{
+
+        var edad = hoy.getFullYear() - cumple.getFullYear();
+
+        if (hoy.getMonth() < cumple.getMonth() || (hoy.getMonth() == cumple.getMonth() && hoy.getDate() < cumple.getDate())) {
+            edad--;
+        }
+
+        p_edad.textContent = "La edad es: " + edad;
     }
-
-    document.getElementById("result").textContent = "La edad es: " + age;
-
 });
