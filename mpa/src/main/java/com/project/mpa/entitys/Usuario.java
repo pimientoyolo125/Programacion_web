@@ -1,17 +1,16 @@
 package com.project.mpa.entitys;
 
+import java.util.ArrayList;
 import java.util.List;
 
-
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -35,13 +34,8 @@ public class Usuario {
 
     private String contrasena;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-        name = "usuario_libro",
-        joinColumns = @JoinColumn(name = "usuario_id", referencedColumnName = "id"),
-        inverseJoinColumns = @JoinColumn(name = "libro_id", referencedColumnName = "id")
-    )
-    private List<UsuarioLibro> libros;
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Libro> libros = new ArrayList<>();
 
     public Usuario(){
 
@@ -113,11 +107,11 @@ public class Usuario {
         this.contrasena = contrasena;
     }
 
-    public List<UsuarioLibro> getLibros() {
+    public List<Libro> getLibros() {
         return libros;
     }
 
-    public void setLibros(List<UsuarioLibro> libros) {
+    public void setLibros(List<Libro> libros) {
         this.libros = libros;
     }
 }

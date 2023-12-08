@@ -1,31 +1,60 @@
 package com.project.mpa.services;
 
-import java.util.List;
+import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.project.mpa.dao.LibroDao;
 import com.project.mpa.entitys.Libro;
-
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
-import jakarta.persistence.Query;
+import com.project.mpa.entitys.Usuario;
 
 @Service
 public class LibroService {
     
-    @PersistenceContext
-    private EntityManager entityManager;
+    
+    private LibroDao libroDao;
 
-    @SuppressWarnings("unchecked")
-    public List<Libro> obtenerLibrosSinAsignar() {
-        Query query = entityManager.createNativeQuery(
-                "SELECT l.id as id, l.titulo as titulo, l.autor as autor, l.precio as precio " +
-                        "FROM libros l " +
-                        "LEFT JOIN usuario_libro ul ON l.id = ul.libro_id AND ul.usuario_id = 1 " +
-                        "WHERE ul.libro_id IS NULL",
-                "LibroMapping"
-        );
-        return query.getResultList();
+    @Autowired
+    public LibroService (LibroDao libroDao) {
+        this.libroDao = libroDao;
+    }
+
+    public Libro addLibro(String titulo, String autor, Long cantidad, Double precio, Usuario usuario){
+        Libro newLibro = new Libro();
+        newLibro.setAutor(autor);
+        newLibro.setCantidad(cantidad);
+        newLibro.setPrecio(precio);
+        newLibro.setTitulo(titulo);
+        newLibro.setUsuario(usuario);
+
+        libroDao.save(newLibro);
+        return newLibro;
+    }
+
+    public Libro actualizaLibro(Long id, String titulo, String autor, Long cantidad, Double precio, Usuario usuario){
+        Libro newLibro = new Libro();
+        newLibro.setId(id);
+        newLibro.setAutor(autor);
+        newLibro.setCantidad(cantidad);
+        newLibro.setPrecio(precio);
+        newLibro.setTitulo(titulo);
+        newLibro.setUsuario(usuario);
+
+        libroDao.save(newLibro);
+        return newLibro;
+    }
+
+    @Transactional
+    public void deleteLibro(Libro libro){
+        libroDao.eliminarLibroPorId(libro.getId());
+    }
+    
+    public Libro obtenerLibroId(Long id){
+        Optional<Libro> libroOp = libroDao.findById(id);
+        Libro libro = libroOp.get();
+        return libro;
     }
 
 }

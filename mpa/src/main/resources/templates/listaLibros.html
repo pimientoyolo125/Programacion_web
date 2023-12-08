@@ -41,20 +41,27 @@
                         <th>Autor</th>
                         <th>Cantidad</th>
                         <th>Precio</th>
+                        <th>Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr th:each="libro:${libros}">
-                        <td th:text="${libro.libro.id}"></td>
-                        <td th:text="${libro.libro.titulo}"></td>
-                        <td th:text="${libro.libro.autor}"></td>
+                        <td th:text="${libro.id}"></td>
+                        <td th:text="${libro.titulo}"></td>
+                        <td th:text="${libro.autor}"></td>
                         <td th:text="${libro.cantidad}"></td>
-                        <td th:text="${libro.libro.precio}"></td>
+                        <td th:text="${libro.precio}"></td>
+                        <td>
+                            <a class="button is-link" th:href="@{/editarLibro/}+${libro.id}">Editar</a>
+                            <button class="button is-danger" th:onclick="'eliminarLibro(\'' + ${libro.id} + '\')'">Eliminar</button>
+                        </td>
+                        
                     </tr>
                 </tbody>
             </table>
         </article>
     </div>
+    <script th:src="@{/js/listaLibros.js}"></script>
 </body>
 
 </html>

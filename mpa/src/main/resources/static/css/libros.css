@@ -34,3 +34,12 @@
 .field {
     margin-bottom: 10px;
 }
+
+.control .porDefecto {
+    display: none;
+}
+
+
+center{
+    margin-bottom: 10px;
+}
