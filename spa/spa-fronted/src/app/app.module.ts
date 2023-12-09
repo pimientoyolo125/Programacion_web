@@ -3,14 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+import { FormsModule } from '@angular/forms';
+import { MoviesListComponent } from './components/movies/movies-list/movies-list.component';
+import { MoviesDetailsComponent } from './components/movies/movie-details/movie-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    MoviesListComponent,
+    MoviesDetailsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule // <-- import the FormsModule before binding with [(ngModel)]
   ],
   providers: [],
   bootstrap: [AppComponent]

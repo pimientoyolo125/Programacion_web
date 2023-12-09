@@ -1,0 +1,13 @@
+<div class="container" *ngIf="!movies">
+    <img src="/assets/images/loading.gif" alt="">
+</div>
+<div class="row" *ngIf="movies">
+    <div class="card col-md-4 col-md-6 col-xs-12" *ngFor="let movie of movies">
+        <div class="alert alert-info cursor-pointer" [routerLink]="['/movie', movie._id]">
+            <div class="card-body">
+                <p class="card-tittle">Título: {{movie.title}}</p>
+                <p>{{movie.year}}</p>
+                <img [src]="movie.image" [alt]="movie.title" class="card-img-top">
+            </div>
+        </div>
+    </div>

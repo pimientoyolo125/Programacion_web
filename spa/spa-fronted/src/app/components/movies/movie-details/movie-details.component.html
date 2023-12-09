@@ -1,0 +1,54 @@
+<div class="text-center" *ngIf="!movie">
+    <img src="/assets/images/loading.gif" alt="">
+</div>
+
+<div class="row" *ngIf="movie">
+    <div class="col-md-4">
+        <img [src]="movie.image" [alt]="movie.title">
+    </div>
+    <div class="col-md-7 ms-auto">
+        <table class=" table table-dark table-hover ">
+            <tbody>
+                <tr>
+                    <td>Título</td>
+                    <td>
+                        {{movie.title}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Año</td>
+                    <td>
+                        {{movie.year}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Género</td>
+                    <td>
+                        <span *ngFor="let genre of movie.genres " class="badge ">
+                            {{genre.name}}
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Calificación</td>
+                    <td>{{movie.rating}}</td>
+                </tr>
+                <tr>
+                    <td>Lanzamiento</td>
+                    <td>{{movie.release}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary" defaultHref="/">Regresar</button>
+        <form>
+            <p></p>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Compartenos tu opinión acerca de esta película:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <p></p>
+            <button class="btn btn-warning" defaultHref="/">Añadir Reseña</button>
+            <p></p>
+        </form>
+    </div>
+</div>
