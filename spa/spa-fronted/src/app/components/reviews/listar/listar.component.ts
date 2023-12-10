@@ -31,5 +31,11 @@ export class ListarComponent implements OnInit{
     Regresar():void{
       this.location.back();
     }
+
+    Eliminar(id: number){
+      if (confirm('¿Estás seguro de eliminar este elemento?\nID=' + id.toString())) {
+        this.service.Eliminar(id);
+      }
+    }
   
 }

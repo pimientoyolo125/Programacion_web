@@ -11,8 +11,8 @@
                     <input type="text" class="form-control" name="coment" id="coment" [(ngModel)]="review.comentario" required minlength="4" maxlength="60" #coment="ngModel">
                     <p></p>
                 </div>
-                <button class="btn btn-primary ">Añadir</button>
-                <button (click)="Regresar() " class="btn btn-danger " style="margin-left: 10px; ">Cancelar</button>
+                <button type="submit" class="btn btn-primary ">Añadir</button>
+                <button type="button" (click)="Regresar() " class="btn btn-danger " style="margin-left: 10px; ">Cancelar</button>
             </form>
         </div>
     </div>

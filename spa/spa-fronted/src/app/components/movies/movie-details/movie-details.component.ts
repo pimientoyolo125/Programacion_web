@@ -26,12 +26,12 @@ export class MoviesDetailsComponent implements OnInit {
     })
   } 
    
-  Listar(){
-    this.router.navigate(["listar"]);
+  Listar(movieId: String){
+    this.router.navigate(["listar", movieId]);
   }
 
-  Nuevo(){
-    this.router.navigate(["add"]);
+  Nuevo(movieId:String){
+    this.router.navigate(["add", movieId]);
   }
 
   Regresar():void{

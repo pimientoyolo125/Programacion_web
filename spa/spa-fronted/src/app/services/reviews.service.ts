@@ -20,4 +20,9 @@ export class ReviewsService {
     return this.http.post<Review>(this.Url2, review);
   }
 
+  Eliminar(id: number){
+    this.http.delete(this.Url2 + "/" + id).subscribe(() => {
+      location.reload();
+    });
+  }
 }

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Location} from '@angular/common'
 import { ReviewsService } from 'src/app/services/reviews.service';
-import { Router } from '@angular/router';
 import { Review } from 'src/app/Modelo/Review';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-add',
@@ -15,17 +15,23 @@ export class AddComponent implements OnInit{
   review:Review = new Review();
   constructor(
     private location:Location,
+    private route:ActivatedRoute,
     private router:Router,
     private service:ReviewsService) { }
     
-  ngOnInit(): void{}
+  ngOnInit(){
+    this.route.params.subscribe(params => {
+      this.movieId = params['movieId'];
+    });
+  }
 
   Guardar(){
+    this.review.pelicula = this.movieId;
     this.service.createReview(this.review).subscribe({
       next: data =>{
       console.log(data);
       alert("Se agrego con Éxito...!!!")
-      this.router.navigate(['listar']);
+      this.location.back();
       }
     });
   }
@@ -34,7 +40,7 @@ export class AddComponent implements OnInit{
     this.Guardar();
   }
 
-  Regresar():void{
+  Regresar(){
     this.location.back();
   }
 }
