@@ -1,13 +1,10 @@
 package com.project.back_spa.modelos;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -18,10 +15,8 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "pelicula_id")
-    @JsonBackReference
-    private Pelicula pelicula;
+    @Column(name="pelicula_id")
+    private String pelicula;
 
     private String comentario;
 
@@ -35,11 +30,11 @@ public class Review {
         this.id = id;
     }
 
-    public Pelicula getPelicula() {
+    public String getPelicula() {
         return pelicula;
     }
 
-    public void setPelicula(Pelicula pelicula) {
+    public void setPelicula(String pelicula) {
         this.pelicula = pelicula;
     }
 
