@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.project.back_spa.modelos.Pelicula;
 import com.project.back_spa.modelos.Review;
 import com.project.back_spa.repositorios.repoReview;
 
@@ -16,8 +15,8 @@ public class serviceReview{
     @Autowired
     private repoReview repo;
 
-    public List<Review> findAllbyPelicula(Pelicula pelicula){
-        return pelicula.getReviews();
+    public List<Review> findAllbyPelicula(String pelicula){
+        return repo.findByPelicula(pelicula);
     }
 
     public Review findById(Long id){
