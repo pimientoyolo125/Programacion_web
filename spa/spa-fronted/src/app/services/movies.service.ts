@@ -28,4 +28,6 @@ export class MoviesService {
     })
     .pipe(map((resp: any) => resp.result))
   }
+
+  
 }

@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { MoviesListComponent } from './components/movies/movies-list/movies-list.component';
 import { MoviesDetailsComponent } from './components/movies/movie-details/movie-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ListarComponent } from './components/reviews/listar/listar.component';
+import { EditComponent } from './components/reviews/edit/edit.component';
+import { AddComponent } from './components/reviews/add/add.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,13 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     HomeComponent,
     MoviesListComponent,
-    MoviesDetailsComponent
+    MoviesDetailsComponent,
+    ListarComponent,
+    EditComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule // <-- import the FormsModule before binding with [(ngModel)]

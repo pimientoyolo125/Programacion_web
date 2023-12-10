@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { MoviesListComponent } from './components/movies/movies-list/movies-list.component';
 import { MoviesDetailsComponent } from './components/movies/movie-details/movie-details.component';
+import { ListarComponent } from './components/reviews/listar/listar.component';
+import { AddComponent } from './components/reviews/add/add.component';
+import { EditComponent } from './components/reviews/edit/edit.component';
 
 const routes: Routes = [
  
@@ -17,6 +20,18 @@ const routes: Routes = [
   {
     path:'movie/:movieId',
     component: MoviesDetailsComponent
+  },
+  {
+   path:'listar',
+  component: ListarComponent
+  },
+  {
+   path:'add',
+    component: AddComponent
+  },
+  {
+    path:'edit',
+    component: EditComponent
   },
   {
     path:'**',

@@ -39,16 +39,13 @@
                 </tr>
             </tbody>
         </table>
-        <button class="btn btn-primary" defaultHref="/">Regresar</button>
+        <button (click)="Regresar()" class="btn btn-primary" defaultHref="/">Regresar</button>
         <form>
             <p></p>
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Compartenos tu opinión acerca de esta película:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <div>
+                <button (click)="Listar()" class="btn btn-info">Ver reseñas</button>
+                <button (click)="Nuevo()" class="btn btn-info" style="margin-left: 10px;">Nuevo</button>
             </div>
-            <p></p>
-            <button class="btn btn-warning" defaultHref="/">Añadir Reseña</button>
-            <p></p>
         </form>
     </div>
 </div>
