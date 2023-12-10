@@ -25,7 +25,7 @@ export class AddComponent implements OnInit{
       next: data =>{
       console.log(data);
       alert("Se agrego con Éxito...!!!")
-      this.router.navigate(['listar/:movieId']);
+      this.router.navigate(['listar']);
       }
     });
   }

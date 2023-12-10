@@ -4,14 +4,14 @@
             <h3>Compartenos tu opinión acerca de esta película</h3>
         </div>
         <div class="card-body">
-            <form class="form-group">
+            <form (ngSubmit)="guardarSubmit()" #artistaForm="ngForm" class="form-group">
                 <div class="form-controls">
-                    <span></span>
+                    <!-- <span></span> -->aqui mirar como capturar el move._Id
                     <label for="coment">Escribe tu opinión al respecto</label>
-                    <input type="text" class="form-control" name="coment" id="coment" [(ngModel)]="review.comentario" required minlength="4" maxlength="60" #nombre="ngModel">
+                    <input type="text" class="form-control" name="coment" id="coment" [(ngModel)]="review.comentario" required minlength="4" maxlength="60" #coment="ngModel">
                     <p></p>
                 </div>
-                <button (click)="guardarSubmit()" class="btn btn-primary ">Añadir</button>
+                <button class="btn btn-primary ">Añadir</button>
                 <button (click)="Regresar() " class="btn btn-danger " style="margin-left: 10px; ">Cancelar</button>
             </form>
         </div>
