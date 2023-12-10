@@ -15,8 +15,7 @@ export class ListarComponent implements OnInit{
   movieId!: string;
   constructor(
     private service:ReviewsService, 
-    private route:ActivatedRoute, 
-    private router:Router,
+    private route:ActivatedRoute,
     private location:Location){}
 
   ngOnInit(){
