@@ -6,7 +6,7 @@
         <div class="card-body">
             <table class="table table-hover">
                 <thead>
-                    <tr>
+                    <tr style="text-align: center;">
                         <th>Id</th>
                         <th>Película</th>
                         <th>Descripción reseña</th>
@@ -19,7 +19,7 @@
                         <td>{{resena.comentario}}</td>
                         <td>
                             <button class="btn btn-warning">Editar</button>
-                            <button class="btn btn-warning" style="margin-left: 10px;">Eliminar</button>
+                            <button class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
                         </td>
                         <td></td>
                     </tr>
@@ -27,4 +27,6 @@
             </table>
         </div>
     </div>
+    <p></p>
+    <button (click)="Regresar()" class="btn btn-primary" defaultHref="/">Regresar</button>
 </div>

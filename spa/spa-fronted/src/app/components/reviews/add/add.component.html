@@ -1,28 +1,19 @@
-<div class="container">
+<div class="container col-md-6">
     <div class="card">
         <div class="card-header">
-            <h3>Reseñas</h3>
+            <h3>Compartenos tu opinión acerca de esta película</h3>
         </div>
         <div class="card-body">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Pelicula</th>
-                        <th>Descripción reseña</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngfor="let resena of resenas" class="text-center">
-                        <td>{{resena.id}}</td>
-                        <td>{{resena.description}}</td>
-                        <td>
-                            <button class="btn btn-warning">Editar</button>
-                            <button class="btn btn-warning" style="margin-left: 10px;">Eliminar</button>
-                        </td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
+            <form action="">
+                <div class="for-group">
+                    <label for="coment"></label>
+                    <textarea name="coment" class="form-control"></textarea>
+                    <p></p>
+                </div>
+                <button class="btn btn-primary" defaultHref="/">Añadir</button>
+                <button (click)="Regresar()" class="btn btn-danger" style="margin-left: 10px;">Cancelar</button>
+            </form>
         </div>
     </div>
+    <p></p>
 </div>

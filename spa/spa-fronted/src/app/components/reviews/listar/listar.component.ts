@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Review } from 'src/app/Modelo/Review';
 import { ReviewsService } from 'src/app/services/reviews.service';
+import {Location} from '@angular/common'
 
 @Component({
   selector: 'app-listar',
@@ -15,7 +16,8 @@ export class ListarComponent implements OnInit{
   constructor(
     private service:ReviewsService, 
     private route:ActivatedRoute, 
-    private router:Router){}
+    private router:Router,
+    private location:Location){}
 
   ngOnInit(){
     this.route.params.subscribe(params => {
@@ -25,6 +27,10 @@ export class ListarComponent implements OnInit{
         this.service.getReviews(this.movieId).subscribe(data => {
         this.resenas = data;
       })
+    }
+
+    Regresar():void{
+      this.location.back();
     }
   
 }

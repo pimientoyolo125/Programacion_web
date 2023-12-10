@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MoviesService } from 'src/app/services/movies.service';
+import {Location} from '@angular/common'
 
 
 @Component({
@@ -14,7 +15,8 @@ export class MoviesDetailsComponent implements OnInit {
     constructor(
       private movieService: MoviesService,
       private activatedRoute: ActivatedRoute,
-      private router:Router) { }
+      private router:Router,
+      private location:Location) { }
 
   ngOnInit(): void{
     this.activatedRoute.params.subscribe((params:any) => {
@@ -22,7 +24,8 @@ export class MoviesDetailsComponent implements OnInit {
         this.movie = response;
       })
     })
-  }  
+  } 
+   
   Listar(movieId:String){
     this.router.navigate(["listar", movieId]);
   }
@@ -31,7 +34,7 @@ export class MoviesDetailsComponent implements OnInit {
     this.router.navigate(["add"]);
   }
 
-  Regresar(){
-    this.router.navigate(["movies"]);
+  Regresar():void{
+    this.location.back();
   }
   }
