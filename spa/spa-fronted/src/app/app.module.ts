@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListarComponent } from './components/reviews/listar/listar.component';
 import { EditComponent } from './components/reviews/edit/edit.component';
 import { AddComponent } from './components/reviews/add/add.component';
+import {ReviewsService} from '../app/services/reviews.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { AddComponent } from './components/reviews/add/add.component';
     AppRoutingModule,
     HttpClientModule // <-- import the FormsModule before binding with [(ngModel)]
   ],
-  providers: [],
+  providers: [ReviewsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

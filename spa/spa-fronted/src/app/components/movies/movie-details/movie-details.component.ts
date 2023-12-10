@@ -26,9 +26,11 @@ export class MoviesDetailsComponent implements OnInit {
   Listar(){
     this.router.navigate(["listar"]);
   }
+
   Nuevo(){
     this.router.navigate(["add"]);
   }
+
   Regresar(){
     this.router.navigate(["movies"]);
   }

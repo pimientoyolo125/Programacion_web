@@ -1,4 +1,5 @@
 export class Review{
     id!: number;
-    descripcion!: string;
+    pelicula!: string;
+    comentario!: string;
 }

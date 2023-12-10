@@ -7,14 +7,16 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Pelicula</th>
+                        <th>Id</th>
+                        <th>Película</th>
                         <th>Descripción reseña</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngfor="let resena of resenas" class="text-center">
+                    <tr *ngFor="let resena of resenas" class="text-center">
                         <td>{{resena.id}}</td>
-                        <td>{{resena.description}}</td>
+                        <td>{{resena.pelicula}}</td>
+                        <td>{{resena.comentario}}</td>
                         <td>
                             <button class="btn btn-warning">Editar</button>
                             <button class="btn btn-warning" style="margin-left: 10px;">Eliminar</button>
