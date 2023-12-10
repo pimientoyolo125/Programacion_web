@@ -22,7 +22,7 @@ const routes: Routes = [
     component: MoviesDetailsComponent
   },
   {
-   path:'listar',
+   path:'listar/:movieId',
   component: ListarComponent
   },
   {

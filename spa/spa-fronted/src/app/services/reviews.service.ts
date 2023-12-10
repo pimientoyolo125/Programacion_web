@@ -9,9 +9,9 @@ export class ReviewsService {
 
   constructor(private http:HttpClient) { }
 
-  Url='http://localhost:8080/review/pelicula/peli';
+  Url='http://localhost:8080/review/pelicula/';
 
-  getReviews(){
-    return this.http.get<Review[]>(this.Url);
+  getReviews(movieId: String){
+    return this.http.get<Review[]>(this.Url + movieId);
   }
 }

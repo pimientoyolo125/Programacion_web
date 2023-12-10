@@ -11,14 +11,18 @@ import { ReviewsService } from 'src/app/services/reviews.service';
 export class ListarComponent implements OnInit{
 
   resenas!: Review[];
-  id!: string;
+  movieId!: string;
   constructor(
     private service:ReviewsService, 
     private route:ActivatedRoute, 
     private router:Router){}
 
   ngOnInit(){
-        this.service.getReviews().subscribe(data => {
+    this.route.params.subscribe(params => {
+      this.movieId = params['movieId'];
+    });
+
+        this.service.getReviews(this.movieId).subscribe(data => {
         this.resenas = data;
       })
     }
