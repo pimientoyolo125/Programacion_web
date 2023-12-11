@@ -4,32 +4,35 @@
             <h3>Reseñas</h3>
         </div>
         <div class="card-body">
-            <table class="table table-hover">
-                <thead>
-                    <tr style="text-align: center;">
-                        <th>Id</th>
-                        <th>Película</th>
-                        <th>Descripción reseña</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let resena of resenas" class="text-center">
-                        <td>{{resena.id}}</td>
-                        <td>{{resena.pelicula}}</td>
-                        <td>{{resena.comentario}}</td>
-                        <td>
-                            <div class="table-buttons">
-                                <button (click)="Editar(resena)" class="btn btn-warning">Editar</button>
-                                <button (click)="Eliminar(resena.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
-                            </div>
-                        </td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="text-center">
+                            <th>ID</th>
+                            <th>Película</th>
+                            <th>Descripción reseña</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let resena of resenas" class="text-center">
+                            <td class="align-middle">{{resena.id}}</td>
+                            <td class="align-middle">{{resena.pelicula}}</td>
+                            <td class="align-middle">{{resena.comentario}}</td>
+                            <td class="align-middle">
+                                <div class="table-buttons">
+                                    <button (click)="Editar(resena)" class="btn btn-warning">Editar</button>
+                                    <button (click)="Eliminar(resena.id)" class="btn btn-danger ms-2">Eliminar</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-    <p></p>
-    <button (click)="Regresar()" class="btn btn-primary" defaultHref="/">Regresar</button>
-    <button (click)="Nuevo(movie._id)" class="btn btn-info" style="margin-left: 10px;">Agregar reseña</button>
+    <div class="mt-3">
+        <button (click)="Regresar()" class="btn btn-primary">Regresar</button>
+        <button (click)="Nuevo(movie._id)" class="btn btn-info ms-2">Agregar reseña</button>
+    </div>
 </div>

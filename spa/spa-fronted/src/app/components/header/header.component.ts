@@ -14,9 +14,9 @@ export class HeaderComponent implements OnInit{
     
   }
 
-  buscarPeliculas(event: Event){
-    event.preventDefault();
-    this.router.navigate(['/movies'], {queryParams: {q: this.movieTitle}});
+  buscarPeliculas(): void {
+    // Puedes realizar el filtrado o cualquier otra lógica aquí
+    this.router.navigate(['/movies'], { queryParams: { q: this.movieTitle } });
   }
 
 }

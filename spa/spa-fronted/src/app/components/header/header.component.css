@@ -1,23 +1,24 @@
-/* En tu archivo de estilos (por ejemplo, app.component.css) */
+/* styles.css */
 
-.alert-info .container .row .barra .search {
+.search-container {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.alert-info .container .row .barra .search input {
-    min-width: 100px;
-    height: 35px;
-    font-size: 14px;
-    padding-right: 30px;
+.form-control {
+    width: 80%;
 }
 
-.alert-info .container .row .barra .search svg {
+.contenedor-icono {
     position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
     cursor: pointer;
-    pointer-events: none;
+    right: 180px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-group:hover .form-control {
+    border-color: #000;
+    /* Cambia aquí al color que prefieras (negro) */
 }
