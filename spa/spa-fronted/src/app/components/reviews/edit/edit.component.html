@@ -1,1 +1,19 @@
-<p>edit works!</p>
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Tu opinión ha cambiado</h3>
+        </div>
+        <div class="card-body">
+            <form (ngSubmit)="Actualizar()" class="form-group">
+                <div class="form-controls">
+                    <label for="coment">¿Cuál es tu nueva opinión?</label>
+                    <textarea type="text" class="form-control" name="coment" id="coment" [(ngModel)]="review.comentario" required minlength="4" maxlength="60" #coment="ngModel"></textarea>
+                    <p></p>
+                </div>
+                <button type="submit" class=" btn btn-primary ">Actualizar</button>
+                <button type="button " (click)="Regresar() " class="btn btn-danger " style="margin-left: 10px; ">Cancelar</button>
+            </form>
+        </div>
+    </div>
+    <p></p>
+</div>

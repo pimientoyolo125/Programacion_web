@@ -30,10 +30,6 @@ export class MoviesDetailsComponent implements OnInit {
     this.router.navigate(["listar", movieId]);
   }
 
-  Nuevo(movieId:String){
-    this.router.navigate(["add", movieId]);
-  }
-
   Regresar():void{
     this.location.back();
   }

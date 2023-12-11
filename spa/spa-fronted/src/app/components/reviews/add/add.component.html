@@ -6,9 +6,8 @@
         <div class="card-body">
             <form (ngSubmit)="guardarSubmit()" #artistaForm="ngForm" class="form-group">
                 <div class="form-controls">
-                    <!-- <span></span> -->aqui mirar como capturar el move._Id
                     <label for="coment">Escribe tu opinión al respecto</label>
-                    <input type="text" class="form-control" name="coment" id="coment" [(ngModel)]="review.comentario" required minlength="4" maxlength="60" #coment="ngModel">
+                    <textarea type="text" class="form-control" name="coment" id="coment" [(ngModel)]="review.comentario" required minlength="4" maxlength="60" #coment="ngModel"></textarea>
                     <p></p>
                 </div>
                 <button type="submit" class="btn btn-primary ">Añadir</button>
