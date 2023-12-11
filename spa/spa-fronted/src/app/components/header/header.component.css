@@ -1,0 +1,23 @@
+/* En tu archivo de estilos (por ejemplo, app.component.css) */
+
+.alert-info .container .row .barra .search {
+    position: relative;
+}
+
+.alert-info .container .row .barra .search input {
+    min-width: 100px;
+    height: 35px;
+    font-size: 14px;
+    padding-right: 30px;
+}
+
+.alert-info .container .row .barra .search svg {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    pointer-events: none;
+}

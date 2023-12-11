@@ -4,14 +4,17 @@
             <h3>Tu opinión ha cambiado</h3>
         </div>
         <div class="card-body">
-            <form (ngSubmit)="Actualizar()" class="form-group">
+            <form class="form-group">
                 <div class="form-controls">
                     <label for="coment">¿Cuál es tu nueva opinión?</label>
-                    <textarea type="text" class="form-control" name="coment" id="coment" [(ngModel)]="review.comentario" required minlength="4" maxlength="60" #coment="ngModel"></textarea>
+                    <textarea type="text" class="form-control" name="coment" id="coment" [(ngModel)]="review.comentario" required minlength="4" maxlength="100" #coment="ngModel"></textarea>
+                    <div class="alert alert-danger mt-2" [hidden]="coment.valid || coment.pristine">
+                        Minimo 4 caracteres, máximo 100.
+                    </div>
                     <p></p>
                 </div>
-                <button type="submit" class=" btn btn-primary ">Actualizar</button>
-                <button type="button " (click)="Regresar() " class="btn btn-danger " style="margin-left: 10px; ">Cancelar</button>
+                <button type="submit" (click)="Actualizar()" class=" btn btn-primary " [disabled]="!coment.valid ">Actualizar</button>
+                <button type="button " (click)="Regresar()" class="btn btn-danger " style="margin-left: 10px; ">Cancelar</button>
             </form>
         </div>
     </div>

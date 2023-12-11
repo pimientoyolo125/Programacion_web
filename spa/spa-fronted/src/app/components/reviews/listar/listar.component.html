@@ -18,8 +18,10 @@
                         <td>{{resena.pelicula}}</td>
                         <td>{{resena.comentario}}</td>
                         <td>
-                            <button (click)="Editar(resena)" class="btn btn-warning">Editar</button>
-                            <button (click)="Eliminar(resena.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+                            <div class="table-buttons">
+                                <button (click)="Editar(resena)" class="btn btn-warning">Editar</button>
+                                <button (click)="Eliminar(resena.id)" class="btn btn-danger" style="margin-left: 10px;">Eliminar</button>
+                            </div>
                         </td>
                         <td></td>
                     </tr>

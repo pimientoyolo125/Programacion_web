@@ -4,14 +4,17 @@
             <h3>Compartenos tu opinión acerca de esta película</h3>
         </div>
         <div class="card-body">
-            <form (ngSubmit)="guardarSubmit()" #artistaForm="ngForm" class="form-group">
+            <form class="form-group">
                 <div class="form-controls">
                     <label for="coment">Escribe tu opinión al respecto</label>
-                    <textarea type="text" class="form-control" name="coment" id="coment" [(ngModel)]="review.comentario" required minlength="4" maxlength="60" #coment="ngModel"></textarea>
+                    <textarea type="text" class="form-control" name="coment" id="coment" [(ngModel)]="review.comentario" required minlength="4" maxlength="150" #coment="ngModel"></textarea>
+                    <div class="alert alert-danger mt-2" [hidden]="coment.valid || coment.pristine">
+                        Minimo 4 caracteres, máximo 100.
+                    </div>
                     <p></p>
                 </div>
-                <button type="submit" class="btn btn-primary ">Añadir</button>
-                <button type="button" (click)="Regresar() " class="btn btn-danger " style="margin-left: 10px; ">Cancelar</button>
+                <button type="submit " (click)="guardarSubmit()" class=" btn btn-primary " [disabled]="!coment.valid ">Añadir</button>
+                <button type="button " (click)="Regresar() " class="btn btn-danger " style="margin-left: 10px; ">Cancelar</button>
             </form>
         </div>
     </div>
